@@ -1,93 +1,111 @@
 # Crevisto CLI
 
-AI image generation from your terminal. Agent-first, CLI-first.
+AI image generation from your terminal. 40 curated tools, agent-first, CLI-first.
+
+## Install
+
+```sh
+curl -fsSL https://crevisto.com/install.sh | sh
+```
+
+Or download from [releases](https://github.com/javimosch/crevisto/releases):
+
+| Platform | File |
+|---|---|
+| Linux amd64 | `crevisto-linux-amd64` |
+| macOS Apple Silicon | `crevisto-darwin-arm64` |
+| macOS Intel | `crevisto-darwin-amd64` |
 
 ## Quick start
 
-```bash
-# Build
-go build -ldflags "-s -w -X main.version=0.1.0" -o crevisto-cli
+```sh
+# Get a free trial token (5 credits, no email needed)
+crevisto trial
 
-# Set your token (invent any 16+ char string — auto-provisions a trial account)
-./crevisto-cli auth my-secret-agent-token-12345
+# Check your status
+crevisto whoami
 
-# Check your status (5 free images per trial)
-./crevisto-cli whoami
-
-# List available image generation tools
-./crevisto-cli tools
+# List all 40 AI tools
+crevisto tools
 
 # Generate an image
-./crevisto-cli generate family-hug-generator --input photo=./my-photo.jpg --output result.png
+crevisto generate linkedin-avatar --input photo=./me.jpg --output ./result.webp
 
-# Attach your own OpenRouter key for unlimited free generations (BYOK)
-./crevisto-cli set-key sk-or-v1-xxx
+# Browse the public gallery
+crevisto gallery
+
+# Download a gallery image
+crevisto gallery-download <id>
 ```
 
 ## How it works
 
-1. **Invent a bearer token** — any string ≥16 chars. No signup, no email.
-2. **Get 5 free images** — the platform auto-provisions a trial account on first `whoami` call.
-3. **Bind your email** after 5 images — `crevisto-cli claim --email you@example.com` (verification email sent).
-4. **Bring your own key** — attach an OpenRouter API key for unlimited zero-credit generations.
-
-The default image model is **meta/muse-image**.
-
-## CLI specs alignment
-
-This CLI is aligned to all 7 [cli-specs](https://cli-specs.intrane.fr/):
-
-| Spec | Implementation |
-|---|---|
-| [cli-output-spec](https://cli-specs.intrane.fr/) | JSON stdout, typed errors on stderr, exit codes 80-119, `help-json` |
-| [cli-guide-spec](https://cli-specs.intrane.fr/) | `guide` (JSON default, `--human`), embedded in binary |
-| [cli-feedback-spec](https://cli-specs.intrane.fr/) | `feedback` command, best-effort, idempotency key |
-| [cli-update-spec](https://cli-specs.intrane.fr/) | `update --check`, content-hash, verify-then-swap, `.bak` rollback |
-| [cli-telemetry-spec](https://cli-specs.intrane.fr/) | `telemetry` prints payload, `DO_NOT_TRACK=1` respected |
-| [cli-daemon-spec](https://cli-specs.intrane.fr/) | `serve` (loopback default), `/_health`, `/_shutdown`, `daemon start\|stop\|status` |
-| [cli-trial-spec](https://cli-specs.intrane.fr/) | `auth`, `whoami`, `claim`, `set-key` — bearer-as-tenant auto-provisioning |
+1. **Get a trial token** — `crevisto trial` gives you a bearer token with 5 free credits. No signup, no email.
+2. **Generate images** — pick a tool, provide inputs, get a WebP/PNG back.
+3. **Run out of credits?** Either:
+   - `crevisto claim --email you@example.com` — bind your email for more credits
+   - `crevisto set-key sk-or-v1-xxx` — BYOK (Bring Your Own Key), unlimited, zero credits
+4. **Go public** — free trial generations are auto-public in the gallery. BYOK users can opt-in with `--public`.
 
 ## Commands
 
-```
-auth <token>            Set your bearer token
-whoami                  Check trial status
-tools                   List available tools
-generate <slug>         Generate an image (--input k=v, --output path)
-claim --email <email>   Bind your email
-set-key <key>           Attach OpenRouter API key (BYOK, zero credits)
-guide [--human]         Print the embedded guide
-help-json               Machine-readable command catalog
-feedback <message>      Send feedback
-update [--check]        Self-update
-telemetry               Show telemetry info
-serve [--host --port]   Run daemon in foreground
-daemon start|stop|status  Manage background daemon
-```
-
-## Exit codes
-
-| Range | Meaning |
+| Command | Purpose |
 |---|---|
-| 0 | Success |
-| 80-89 | Input/validation error |
-| 90-99 | Resource/precondition error |
-| 100-109 | External/integration error (recoverable) |
-| 110-119 | Internal/bug error (recoverable) |
+| `crevisto trial` | Get a free trial token (5 credits) |
+| `crevisto tools` | List all 40 AI tools (JSON) |
+| `crevisto generate <slug>` | Generate an image |
+| `crevisto whoami` | Check credit balance and trial status |
+| `crevisto claim --email <email>` | Bind email to trial account |
+| `crevisto set-key <key>` | Attach OpenRouter BYOK key (unlimited, zero credits) |
+| `crevisto gallery` | Browse public gallery (JSON) |
+| `crevisto gallery-download <id>` | Download a gallery image |
+| `crevisto gallery-toggle <id>` | Toggle your generation public/private |
 
-## Build
+## Tool examples
 
-```bash
-go build -ldflags "-s -w -X main.version=0.1.0" -o crevisto-cli
+| Tool | Credits | Inputs | Type |
+|---|---|---|---|
+| `linkedin-avatar` | 2 | photo + style | Image-to-image |
+| `logo-maker` | 2 | description + style | Text-to-image |
+| `pet-portrait` | 2 | photo + style | Image-to-image |
+| `photo-restoration` | 3 | photo | Image-to-image |
+| `book-cover` | 2 | title + description + genre | Text-to-image |
+| `character-art` | 2 | description + style | Text-to-image |
+
+Run `crevisto tools` for the full list of 40 tools.
+
+## BYOK (Bring Your Own Key)
+
+Have an OpenRouter API key? Use it for unlimited generations at zero credit cost:
+
+```sh
+crevisto set-key sk-or-v1-xxxxx
+crevisto generate logo-maker --input description="A tech startup logo" --output ./logo.webp
 ```
 
-Stdlib-only, no external dependencies. Static binary.
+Your key is encrypted with AES-256-GCM and never exposed.
 
-## Platform
+## Agent integration
 
-The Crevisto platform is a separate private project. This CLI talks to it via HTTP.
-Default API base: `https://crevisto.intrane.fr` (override with `CREVISTO_API_BASE` env var).
+The CLI is designed for AI agents. All output is JSON-parseable. No interactive prompts. Deterministic exit codes.
 
-## License
+```sh
+# Agent workflow
+TOKEN=$(crevisto trial --json | jq -r .token)
+crevisto auth $TOKEN
+crevisto tools --json | jq '.tools[].slug'
+crevisto generate linkedin-avatar --input photo=./user.jpg --output ./avatar.webp --json
+```
 
-MIT
+## Build from source
+
+```sh
+go build -ldflags "-s -w" -o crevisto .
+```
+
+## Links
+
+- [Gallery](https://crevisto.com/gallery)
+- [Tools](https://crevisto.com/tools)
+- [Pricing](https://crevisto.com/pricing)
+- [GitHub Releases](https://github.com/javimosch/crevisto/releases)
