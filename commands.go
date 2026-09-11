@@ -7,8 +7,28 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strings"
 )
+
+// mimeByExt returns the MIME type for common image file extensions.
+func mimeByExt(path string) string {
+	ext := strings.ToLower(filepath.Ext(path))
+	switch ext {
+	case ".webp":
+		return "image/webp"
+	case ".png":
+		return "image/png"
+	case ".jpg", ".jpeg":
+		return "image/jpeg"
+	case ".gif":
+		return "image/gif"
+	case ".bmp":
+		return "image/bmp"
+	default:
+		return "image/jpeg" // safe fallback
+	}
+}
 
 // cmdAuth sets the bearer token.
 func cmdAuth(args []string) {
@@ -87,7 +107,8 @@ func cmdGenerate(args []string) {
 						if err != nil {
 							fail(ExitInput, "file_error", "cannot read file: "+val)
 						}
-						val = "data:image/jpeg;base64," + base64.StdEncoding.EncodeToString(data)
+						mime := mimeByExt(val)
+						val = "data:" + mime + ";base64," + base64.StdEncoding.EncodeToString(data)
 					}
 					inputs[parts[0]] = val
 				}
