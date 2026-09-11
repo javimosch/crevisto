@@ -26,6 +26,12 @@ func main() {
 		cmdClaim(args)
 	case "set-key":
 		cmdSetKey(args)
+	case "gallery":
+		cmdGallery(args)
+	case "gallery-download":
+		cmdGalleryDownload(args)
+	case "gallery-toggle":
+		cmdGalleryToggle(args)
 	case "guide":
 		cmdGuide(args)
 	case "help-json":
@@ -60,6 +66,7 @@ func main() {
 // suggestCommand finds the closest matching command.
 func suggestCommand(input string) string {
 	commands := []string{"auth", "whoami", "tools", "generate", "claim", "set-key",
+		"gallery", "gallery-download", "gallery-toggle",
 		"guide", "help-json", "feedback", "update", "telemetry", "serve", "daemon"}
 
 	for _, c := range commands {

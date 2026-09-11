@@ -90,9 +90,10 @@ func cmdGenerate(args []string) {
 	slug := args[0]
 	token := requireToken()
 
-	// Parse --input k=v and --output path
+	// Parse --input k=v, --output path, --public
 	inputs := map[string]string{}
 	outputPath := ""
+	isPublic := false
 	for i := 1; i < len(args); i++ {
 		switch args[i] {
 		case "--input", "-i":
@@ -119,13 +120,15 @@ func cmdGenerate(args []string) {
 				outputPath = args[i+1]
 				i++
 			}
+		case "--public":
+			isPublic = true
 		}
 	}
 
 	c := newAPIClient()
 	c.token = token
 
-	body := map[string]interface{}{"inputs": inputs}
+	body := map[string]interface{}{"inputs": inputs, "isPublic": isPublic}
 	resp, data, err := c.post("/v1/tools/"+slug+"/execute", body)
 	if err != nil {
 		fail(ExitIntegration, "api_error", "failed to reach platform: "+err.Error())
@@ -238,6 +241,107 @@ func cmdSetKey(args []string) {
 // jsonRaw wraps raw JSON bytes in a json.RawMessage for output.
 func jsonRaw(data []byte) json.RawMessage {
 	return json.RawMessage(data)
+}
+
+// cmdGallery lists public gallery images.
+func cmdGallery(args []string) {
+	toolSlug := ""
+	limit := "24"
+	for i := 0; i < len(args); i++ {
+		switch args[i] {
+		case "--tool", "-t":
+			if i+1 < len(args) {
+				toolSlug = args[i+1]
+				i++
+			}
+		case "--limit", "-l":
+			if i+1 < len(args) {
+				limit = args[i+1]
+				i++
+			}
+		}
+	}
+
+	c := newAPIClient()
+	q := "?limit=" + limit
+	if toolSlug != "" {
+		q += "&toolSlug=" + toolSlug
+	}
+	resp, data, err := c.get("/v1/gallery" + q)
+	if err != nil {
+		fail(ExitIntegration, "api_error", "failed to reach platform: "+err.Error())
+	}
+	if resp.StatusCode != 200 {
+		fail(ExitIntegration, "api_error", fmt.Sprintf("gallery returned %d: %s", resp.StatusCode, string(data)))
+	}
+	outData(jsonRaw(data))
+}
+
+// cmdGalleryDownload downloads a gallery image by id.
+func cmdGalleryDownload(args []string) {
+	if len(args) < 1 {
+		fail(ExitInput, "missing_argument", "gallery-download requires an image id", "crevisto gallery  — list ids")
+	}
+	id := args[0]
+	outputPath := ""
+	for i := 1; i < len(args); i++ {
+		switch args[i] {
+		case "--output", "-o":
+			if i+1 < len(args) {
+				outputPath = args[i+1]
+				i++
+			}
+		}
+	}
+	if outputPath == "" {
+		outputPath = "gallery-" + id + ".png"
+	}
+
+	c := newAPIClient()
+	resp, data, err := c.get("/v1/gallery/" + id + "/image")
+	if err != nil {
+		fail(ExitIntegration, "api_error", "failed to reach platform: "+err.Error())
+	}
+	if resp.StatusCode == 404 {
+		fail(ExitResource, "not_found", "gallery image not found: "+id)
+	}
+	if resp.StatusCode != 200 {
+		fail(ExitIntegration, "api_error", fmt.Sprintf("download returned %d: %s", resp.StatusCode, string(data)))
+	}
+	if err := os.WriteFile(outputPath, data, 0644); err != nil {
+		fail(ExitInternal, "write_error", "failed to write file: "+err.Error())
+	}
+	logCtx("image saved to %s (%d bytes)", outputPath, len(data))
+	outData(map[string]string{"saved": outputPath, "bytes": fmt.Sprintf("%d", len(data))})
+}
+
+// cmdGalleryToggle toggles public/private on a generation.
+func cmdGalleryToggle(args []string) {
+	if len(args) < 1 {
+		fail(ExitInput, "missing_argument", "gallery-toggle requires a generation id")
+	}
+	id := args[0]
+	token := requireToken()
+
+	c := newAPIClient()
+	c.token = token
+	resp, data, err := c.post("/v1/gallery/"+id+"/toggle", map[string]interface{}{})
+	if err != nil {
+		fail(ExitIntegration, "api_error", "failed to reach platform: "+err.Error())
+	}
+	if resp.StatusCode == 401 {
+		fail(ExitResource, "not_authenticated", "invalid or missing token", "crevisto auth <token>")
+	}
+	if resp.StatusCode == 403 {
+		fail(ExitResource, "forbidden", "not your generation")
+	}
+	if resp.StatusCode == 404 {
+		fail(ExitResource, "not_found", "generation not found: "+id)
+	}
+	if resp.StatusCode != 200 {
+		fail(ExitIntegration, "api_error", fmt.Sprintf("toggle returned %d: %s", resp.StatusCode, string(data)))
+	}
+	outData(jsonRaw(data))
 }
 
 // init ensures http is imported (used by api.go)
