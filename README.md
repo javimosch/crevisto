@@ -1,6 +1,6 @@
 # Crevisto CLI
 
-AI image generation from your terminal. 40 curated tools, agent-first, CLI-first.
+AI image generation from your terminal. 100 curated tools, agent-first, CLI-first.
 
 ## Install
 
@@ -25,7 +25,7 @@ crevisto trial
 # Check your status
 crevisto whoami
 
-# List all 40 AI tools
+# List all 100 AI tools
 crevisto tools
 
 # Generate an image
@@ -52,7 +52,7 @@ crevisto gallery-download <id>
 | Command | Purpose |
 |---|---|
 | `crevisto trial` | Get a free trial token (5 credits) |
-| `crevisto tools` | List all 40 AI tools (JSON) |
+| `crevisto tools` | List all 100 AI tools (JSON) |
 | `crevisto generate <slug>` | Generate an image |
 | `crevisto whoami` | Check credit balance and trial status |
 | `crevisto claim --email <email>` | Bind email to trial account |
@@ -72,7 +72,7 @@ crevisto gallery-download <id>
 | `book-cover` | 2 | title + description + genre | Text-to-image |
 | `character-art` | 2 | description + style | Text-to-image |
 
-Run `crevisto tools` for the full list of 40 tools.
+Run `crevisto tools` for the full list of 100 tools.
 
 ## BYOK (Bring Your Own Key)
 
@@ -105,7 +105,9 @@ go build -ldflags "-s -w" -o crevisto .
 
 ## Links
 
+- [Crevisto.com](https://crevisto.com) — full web app with 100 AI image tools
 - [Gallery](https://crevisto.com/gallery)
 - [Tools](https://crevisto.com/tools)
 - [Pricing](https://crevisto.com/pricing)
+- [Blog](https://crevisto.com/blog)
 - [GitHub Releases](https://github.com/javimosch/crevisto/releases)
