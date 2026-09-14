@@ -1,0 +1,806 @@
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+{
+  "count": 100,
+  "tools": [
+    {
+      "slug": "linkedin-avatar",
+      "title": "LinkedIn Avatar",
+      "description": "Transform your selfie into a professional LinkedIn headshot",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/linkedin-avatar",
+      "category": "business"
+    },
+    {
+      "slug": "pet-portrait",
+      "title": "Pet Portrait",
+      "description": "Turn your pet photo into an artistic masterpiece",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/pet-portrait",
+      "category": "photo"
+    },
+    {
+      "slug": "product-studio",
+      "title": "Product Studio",
+      "description": "Clean studio product shots from a casual photo",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/product-studio",
+      "category": "business"
+    },
+    {
+      "slug": "photo-restoration",
+      "title": "Photo Restoration",
+      "description": "Restore old or damaged photos to their former glory",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/photo-restoration",
+      "category": "photo"
+    },
+    {
+      "slug": "outfit-try-on",
+      "title": "Outfit Try-On",
+      "description": "See how an outfit looks on you before buying",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/outfit-try-on",
+      "category": "photo"
+    },
+    {
+      "slug": "logo-maker",
+      "title": "Logo Maker",
+      "description": "Generate a professional logo from a text description",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/logo-maker",
+      "category": "design"
+    },
+    {
+      "slug": "social-banner",
+      "title": "Social Banner",
+      "description": "Eye-catching banners for your social media profiles",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/social-banner",
+      "category": "design"
+    },
+    {
+      "slug": "character-art",
+      "title": "Character Art",
+      "description": "Bring your character descriptions to life",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/character-art",
+      "category": "photo"
+    },
+    {
+      "slug": "scene-remix",
+      "title": "Scene Remix",
+      "description": "Combine up to 4 photos into a single cohesive scene",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/scene-remix",
+      "category": "photo"
+    },
+    {
+      "slug": "book-cover",
+      "title": "Book Cover",
+      "description": "Professional book covers from a description",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/book-cover",
+      "category": "design"
+    },
+    {
+      "slug": "resume-photo",
+      "title": "Resume Photo",
+      "description": "Region-specific professional resume photos",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/resume-photo",
+      "category": "business"
+    },
+    {
+      "slug": "team-headshot",
+      "title": "Team Headshot Batch",
+      "description": "Consistent team page photos from individual uploads",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/team-headshot",
+      "category": "business"
+    },
+    {
+      "slug": "real-estate-enhancer",
+      "title": "Real Estate Enhancer",
+      "description": "Listing-quality property photos from casual shots",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/real-estate-enhancer",
+      "category": "business"
+    },
+    {
+      "slug": "food-photography",
+      "title": "Food Photography",
+      "description": "Menu-quality food photos from casual shots",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/food-photography",
+      "category": "business"
+    },
+    {
+      "slug": "car-listing-photo",
+      "title": "Car Listing Photo",
+      "description": "Dealership-quality car photos from driveway shots",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/car-listing-photo",
+      "category": "business"
+    },
+    {
+      "slug": "anime-avatar",
+      "title": "Anime Avatar",
+      "description": "Turn your selfie into an anime character",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/anime-avatar",
+      "category": "photo"
+    },
+    {
+      "slug": "tattoo-preview",
+      "title": "Tattoo Preview",
+      "description": "See how a tattoo design looks on your body",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/tattoo-preview",
+      "category": "photo"
+    },
+    {
+      "slug": "hairstyle-preview",
+      "title": "Hairstyle Preview",
+      "description": "Try a new hairstyle before the cut",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/hairstyle-preview",
+      "category": "photo"
+    },
+    {
+      "slug": "room-redesign",
+      "title": "Room Redesign",
+      "description": "Visualize your room in a new style",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/room-redesign",
+      "category": "photo"
+    },
+    {
+      "slug": "cartoon-portrait",
+      "title": "Cartoon Portrait",
+      "description": "Turn your photo into a cartoon character",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/cartoon-portrait",
+      "category": "photo"
+    },
+    {
+      "slug": "youtube-thumbnail",
+      "title": "YouTube Thumbnail",
+      "description": "Click-worthy thumbnails for your videos",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/youtube-thumbnail",
+      "category": "design"
+    },
+    {
+      "slug": "podcast-cover",
+      "title": "Podcast Cover",
+      "description": "Professional cover art for your podcast",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/podcast-cover",
+      "category": "design"
+    },
+    {
+      "slug": "instagram-story-bg",
+      "title": "Instagram Story BG",
+      "description": "Aesthetic backgrounds for your stories",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/instagram-story-bg",
+      "category": "design"
+    },
+    {
+      "slug": "twitch-overlay",
+      "title": "Twitch Overlay",
+      "description": "Custom overlays for your stream",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/twitch-overlay",
+      "category": "design"
+    },
+    {
+      "slug": "blog-header",
+      "title": "Blog Header",
+      "description": "Header images for your blog posts",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/blog-header",
+      "category": "design"
+    },
+    {
+      "slug": "ad-creative",
+      "title": "Ad Creative",
+      "description": "Scroll-stopping ad images from a description",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/ad-creative",
+      "category": "business"
+    },
+    {
+      "slug": "product-lifestyle",
+      "title": "Product Lifestyle",
+      "description": "Show your product in a real-life setting",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/product-lifestyle",
+      "category": "business"
+    },
+    {
+      "slug": "email-header",
+      "title": "Email Header",
+      "description": "Branded header images for your emails",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/email-header",
+      "category": "business"
+    },
+    {
+      "slug": "flyer-maker",
+      "title": "Flyer Maker",
+      "description": "Promotional flyers from event details",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/flyer-maker",
+      "category": "business"
+    },
+    {
+      "slug": "business-card",
+      "title": "Business Card",
+      "description": "Visual business card designs from your details",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/business-card",
+      "category": "business"
+    },
+    {
+      "slug": "meme-generator",
+      "title": "Meme Generator",
+      "description": "Generate custom meme images",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/meme-generator",
+      "category": "fun"
+    },
+    {
+      "slug": "wallpaper-maker",
+      "title": "Wallpaper Maker",
+      "description": "Custom wallpapers for phone or desktop",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/wallpaper-maker",
+      "category": "fun"
+    },
+    {
+      "slug": "coloring-page",
+      "title": "Coloring Page",
+      "description": "Turn any photo into a coloring page",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/coloring-page",
+      "category": "fun"
+    },
+    {
+      "slug": "vintage-filter",
+      "title": "Vintage Filter",
+      "description": "Give your photos a retro film look",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/vintage-filter",
+      "category": "photo"
+    },
+    {
+      "slug": "album-cover",
+      "title": "Album Cover",
+      "description": "Cover art for your music releases",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/album-cover",
+      "category": "design"
+    },
+    {
+      "slug": "event-poster",
+      "title": "Event Poster",
+      "description": "Professional posters for any event",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/event-poster",
+      "category": "business"
+    },
+    {
+      "slug": "pattern-generator",
+      "title": "Pattern Generator",
+      "description": "Seamless repeating patterns for design",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/pattern-generator",
+      "category": "design"
+    },
+    {
+      "slug": "icon-set",
+      "title": "Icon Set",
+      "description": "App icons from a description",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/icon-set",
+      "category": "design"
+    },
+    {
+      "slug": "infographic-image",
+      "title": "Infographic Image",
+      "description": "Visual statistics from your data",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/infographic-image",
+      "category": "business"
+    },
+    {
+      "slug": "qr-code-art",
+      "title": "QR Code Art",
+      "description": "Branded QR codes that don't look boring",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/qr-code-art",
+      "category": "design"
+    },
+    {
+      "slug": "action-figure",
+      "title": "Action Figure Generator",
+      "description": "Turn your photo into a collectible toy figure with packaging",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/action-figure",
+      "category": "fun"
+    },
+    {
+      "slug": "barbie-box",
+      "title": "Barbie Box Generator",
+      "description": "Turn your photo into a Barbie-style doll in packaging",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/barbie-box",
+      "category": "fun"
+    },
+    {
+      "slug": "ghibli-style",
+      "title": "Ghibli Style",
+      "description": "Transform your photo into Studio Ghibli animation style",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/ghibli-style",
+      "category": "photo"
+    },
+    {
+      "slug": "chibi-avatar",
+      "title": "Chibi Avatar",
+      "description": "Cute big-head small-body chibi avatar from your photo",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/chibi-avatar",
+      "category": "photo"
+    },
+    {
+      "slug": "yearbook-photo",
+      "title": "90s Yearbook Photo",
+      "description": "Retro 90s yearbook style photo from your selfie",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/yearbook-photo",
+      "category": "fun"
+    },
+    {
+      "slug": "background-remover",
+      "title": "Background Remover",
+      "description": "Remove backgrounds instantly — clean cutouts in one click",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/background-remover",
+      "category": "photo"
+    },
+    {
+      "slug": "image-upscaler",
+      "title": "Image Upscaler",
+      "description": "Enhance low-res images to 4K — sharpen and restore detail",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/image-upscaler",
+      "category": "photo"
+    },
+    {
+      "slug": "object-remover",
+      "title": "Object Remover",
+      "description": "Remove unwanted objects, people, or text from photos",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/object-remover",
+      "category": "photo"
+    },
+    {
+      "slug": "sticker-maker",
+      "title": "Sticker Maker",
+      "description": "Create custom stickers from photos or text descriptions",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/sticker-maker",
+      "category": "design"
+    },
+    {
+      "slug": "sketch-to-image",
+      "title": "Sketch to Image",
+      "description": "Turn rough sketches into finished, polished images",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/sketch-to-image",
+      "category": "design"
+    },
+    {
+      "slug": "baby-generator",
+      "title": "AI Baby Generator",
+      "description": "See what your future baby will look like — merge two parent photos",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/baby-generator",
+      "category": "fun"
+    },
+    {
+      "slug": "gender-swap",
+      "title": "Gender Swap",
+      "description": "See yourself as the opposite gender — the most viral AI experiment",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/gender-swap",
+      "category": "fun"
+    },
+    {
+      "slug": "age-progression",
+      "title": "Age Progression",
+      "description": "See yourself 10, 20, or 50 years older — meet your future self",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/age-progression",
+      "category": "fun"
+    },
+    {
+      "slug": "cinematic-collage",
+      "title": "Cinematic Collage",
+      "description": "Magazine-style multi-frame portrait collage — the Prompt Seen trend",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/cinematic-collage",
+      "category": "photo"
+    },
+    {
+      "slug": "hug-younger-self",
+      "title": "Hug My Younger Self",
+      "description": "Meet your childhood self — AI generates an emotional time-travel hug",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/hug-younger-self",
+      "category": "fun"
+    },
+    {
+      "slug": "y2k-flash-photo",
+      "title": "Y2K Flash Photo",
+      "description": "Retro Y2K paparazzi flash photo — direct flash, glossy, 2000s vibe",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/y2k-flash-photo",
+      "category": "fun"
+    },
+    {
+      "slug": "couple-cinematic",
+      "title": "Couple Cinematic Portrait",
+      "description": "Blend two photos into a dreamy romantic cinematic scene",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/couple-cinematic",
+      "category": "photo"
+    },
+    {
+      "slug": "horror-portrait",
+      "title": "Horror Portrait",
+      "description": "Transform your photo into a dark, horror-movie-style portrait",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/horror-portrait",
+      "category": "fun"
+    },
+    {
+      "slug": "3d-character-render",
+      "title": "3D Character Render",
+      "description": "Turn your photo into a 3D animated-movie character",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/3d-character-render",
+      "category": "photo"
+    },
+    {
+      "slug": "80s-retro-portrait",
+      "title": "80s Retro Portrait",
+      "description": "80s Bollywood/studio portrait — big hair, warm tones, film grain",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/80s-retro-portrait",
+      "category": "fun"
+    },
+    {
+      "slug": "photo-to-painting",
+      "title": "Photo to Painting",
+      "description": "Turn any photo into an oil, watercolor, or impressionist painting",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/photo-to-painting",
+      "category": "photo"
+    },
+    {
+      "slug": "renaissance-portrait",
+      "title": "Renaissance Royal Portrait",
+      "description": "Turn your photo into a royal Renaissance painting with crowns and velvet",
+      "credits": 3,
+      "url": "https://crevisto.com/tools/renaissance-portrait",
+      "category": "photo"
+    },
+    {
+      "slug": "pet-pixar",
+      "title": "Pet Pixar Character",
+      "description": "Turn your pet into a Disney Pixar character — the viral TikTok trend",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/pet-pixar",
+      "category": "photo"
+    },
+    {
+      "slug": "personalized-coloring",
+      "title": "Personalized Coloring Page",
+      "description": "Make your child the hero of a coloring page — upload photo, pick theme",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/personalized-coloring",
+      "category": "fun"
+    },
+    {
+      "slug": "photo-to-coloring",
+      "title": "Photo to Coloring Page",
+      "description": "Turn any photo into a printable coloring page outline",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/photo-to-coloring",
+      "category": "fun"
+    },
+    {
+      "slug": "movie-poster",
+      "title": "Movie Poster Maker",
+      "description": "Star in your own Hollywood movie poster",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/movie-poster",
+      "category": "fun"
+    },
+    {
+      "slug": "comic-book",
+      "title": "Comic Book Style",
+      "description": "Turn your photo into a comic book panel with halftone and bold lines",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/comic-book",
+      "category": "photo"
+    },
+    {
+      "slug": "magazine-cover",
+      "title": "Magazine Cover",
+      "description": "Put yourself on the cover of Vogue, TIME, or GQ",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/magazine-cover",
+      "category": "fun"
+    },
+    {
+      "slug": "mandala-generator",
+      "title": "Mandala Generator",
+      "description": "Generate intricate mandala and zentangle patterns for coloring or decor",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/mandala-generator",
+      "category": "design"
+    },
+    {
+      "slug": "photo-collage",
+      "title": "Photo Collage Grid",
+      "description": "Create stylish multi-photo grid collages for Instagram and social media",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/photo-collage",
+      "category": "photo"
+    },
+    {
+      "slug": "holiday-card",
+      "title": "Holiday Card Generator",
+      "description": "Personalized Christmas, Halloween, birthday cards from your photo",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/holiday-card",
+      "category": "fun"
+    },
+    {
+      "slug": "fantasy-character",
+      "title": "Fantasy RPG Character",
+      "description": "Generate D&D-style fantasy character portraits from text — warriors, mages, elves",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/fantasy-character",
+      "category": "photo"
+    },
+    {
+      "slug": "photo-to-sketch",
+      "title": "Photo to Sketch",
+      "description": "Turn any photo into a pencil sketch, charcoal drawing, or line art",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/photo-to-sketch",
+      "category": "photo"
+    },
+    {
+      "slug": "trading-card",
+      "title": "Sports Trading Card",
+      "description": "Turn yourself into a collectible sports trading card",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/trading-card",
+      "category": "fun"
+    },
+    {
+      "slug": "mascot-logo",
+      "title": "Mascot Logo",
+      "description": "Create character mascot logos for brands, teams, and streamers",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/mascot-logo",
+      "category": "design"
+    },
+    {
+      "slug": "tattoo-design",
+      "title": "Tattoo Design Generator",
+      "description": "Generate original tattoo designs from text — fine-line, traditional, tribal",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/tattoo-design",
+      "category": "design"
+    },
+    {
+      "slug": "storybook-illustration",
+      "title": "Storybook Illustration",
+      "description": "Create children's book illustrations from text descriptions",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/storybook-illustration",
+      "category": "design"
+    },
+    {
+      "slug": "zodiac-portrait",
+      "title": "Zodiac Portrait",
+      "description": "Transform your photo into a portrait styled by your zodiac sign",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/zodiac-portrait",
+      "category": "fun"
+    },
+    {
+      "slug": "vintage-postcard",
+      "title": "Vintage Postcard",
+      "description": "Turn your photo into a vintage travel postcard",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/vintage-postcard",
+      "category": "photo"
+    },
+    {
+      "slug": "graduation-photo",
+      "title": "Graduation Photo",
+      "description": "Professional graduation photos from your selfie — cap, gown, diploma",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/graduation-photo",
+      "category": "fun"
+    },
+    {
+      "slug": "wedding-invitation",
+      "title": "Wedding Invitation",
+      "description": "Custom AI wedding invitations and save-the-date cards",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/wedding-invitation",
+      "category": "design"
+    },
+    {
+      "slug": "cyberpunk-portrait",
+      "title": "Cyberpunk Portrait",
+      "description": "Neon-lit cyberpunk portraits from your selfie — rain, chrome, dystopia",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/cyberpunk-portrait",
+      "category": "photo"
+    },
+    {
+      "slug": "passport-photo",
+      "title": "Passport Photo Maker",
+      "description": "Compliant passport, visa, and ID photos from your selfie",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/passport-photo",
+      "category": "business"
+    },
+    {
+      "slug": "tarot-card",
+      "title": "Tarot Card Generator",
+      "description": "Design custom tarot cards — Major Arcana, Minor Arcana, full decks",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/tarot-card",
+      "category": "design"
+    },
+    {
+      "slug": "pixel-art",
+      "title": "Pixel Art Sprite",
+      "description": "Generate 8-bit and 16-bit pixel art sprites for games — characters, items, tiles",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/pixel-art",
+      "category": "design"
+    },
+    {
+      "slug": "nail-art",
+      "title": "Nail Art Design",
+      "description": "Custom nail art designs — try before you go to the salon",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/nail-art",
+      "category": "design"
+    },
+    {
+      "slug": "henna-design",
+      "title": "Henna Design Generator",
+      "description": "Custom henna and mehndi designs — Indian, Arabic, Moroccan, bridal",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/henna-design",
+      "category": "design"
+    },
+    {
+      "slug": "fantasy-map",
+      "title": "Fantasy Map Generator",
+      "description": "Create D&D world maps, dungeon maps, and battle maps from text",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/fantasy-map",
+      "category": "design"
+    },
+    {
+      "slug": "sneaker-design",
+      "title": "Sneaker Design",
+      "description": "Design custom sneakers and shoes from text — colorways, materials, concepts",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/sneaker-design",
+      "category": "design"
+    },
+    {
+      "slug": "cake-design",
+      "title": "Cake Design",
+      "description": "Custom cake designs from text — wedding cakes, birthday cakes, themed",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/cake-design",
+      "category": "design"
+    },
+    {
+      "slug": "perfume-bottle",
+      "title": "Perfume Bottle Design",
+      "description": "Design custom perfume and fragrance bottles from text",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/perfume-bottle",
+      "category": "design"
+    },
+    {
+      "slug": "vaporwave",
+      "title": "Vaporwave Art Generator",
+      "description": "Retro-futuristic vaporwave and synthwave art from text",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/vaporwave",
+      "category": "design"
+    },
+    {
+      "slug": "jewelry-design",
+      "title": "Jewelry Design",
+      "description": "Design custom rings, necklaces, and earrings from text",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/jewelry-design",
+      "category": "design"
+    },
+    {
+      "slug": "stained-glass",
+      "title": "Stained Glass Design",
+      "description": "Create luminous stained glass art from photos or text",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/stained-glass",
+      "category": "design"
+    },
+    {
+      "slug": "double-exposure",
+      "title": "Double Exposure Portrait",
+      "description": "Blend your photo with nature, city, or cosmos in a double exposure",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/double-exposure",
+      "category": "photo"
+    },
+    {
+      "slug": "wine-label",
+      "title": "Wine & Beer Label Design",
+      "description": "Custom wine, beer, and beverage labels — print-ready",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/wine-label",
+      "category": "design"
+    },
+    {
+      "slug": "papercraft",
+      "title": "Papercraft Art",
+      "description": "Transform photos into layered paper cutout art with depth and shadows",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/papercraft",
+      "category": "design"
+    },
+    {
+      "slug": "fairycore-portrait",
+      "title": "Fairycore Portrait",
+      "description": "Ethereal fairy-tale portraits with flowers, wings, and woodland magic",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/fairycore-portrait",
+      "category": "photo"
+    },
+    {
+      "slug": "dark-academia",
+      "title": "Dark Academia Portrait",
+      "description": "Moody scholarly portraits in candlelit libraries and gothic studies",
+      "credits": 2,
+      "url": "https://crevisto.com/tools/dark-academia",
+      "category": "photo"
+    },
+    {
+      "slug": "cross-stitch",
+      "title": "Cross Stitch Pattern",
+      "description": "Generate cross stitch and embroidery patterns from text or photos",
+      "credits": 1,
+      "url": "https://crevisto.com/tools/cross-stitch",
+      "category": "design"
+    }
+  ]
+}
