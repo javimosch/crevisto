@@ -103,6 +103,23 @@ crevisto generate linkedin-avatar --input photo=./user.jpg --output ./avatar.web
 go build -ldflags "-s -w" -o crevisto .
 ```
 
+## Popular tools
+
+| Tool | What it does | Link |
+|---|---|---|
+| `linkedin-avatar` | Professional headshots from selfies | [Try it](https://crevisto.com/tools/linkedin-avatar) |
+| `ghibli-style` | Studio Ghibli-style art | [Try it](https://crevisto.com/tools/ghibli-style) |
+| `logo-maker` | Custom logos in seconds | [Try it](https://crevisto.com/tools/logo-maker) |
+| `photo-restoration` | Fix damaged old photos | [Try it](https://crevisto.com/tools/photo-restoration) |
+| `anime-avatar` | Anime-style portraits | [Try it](https://crevisto.com/tools/anime-avatar) |
+| `pixel-art` | Retro game sprites | [Try it](https://crevisto.com/tools/pixel-art) |
+| `book-cover` | Book cover design | [Try it](https://crevisto.com/tools/book-cover) |
+| `tattoo-design` | Custom tattoo designs | [Try it](https://crevisto.com/tools/tattoo-design) |
+| `meme-generator` | Create custom memes | [Try it](https://crevisto.com/tools/meme-generator) |
+| `fantasy-map` | Fantasy world maps | [Try it](https://crevisto.com/tools/fantasy-map) |
+
+Browse all 100+ tools: https://crevisto.com/tools
+
 ## Links
 
 - [Crevisto.com](https://crevisto.com) — full web app with 100 AI image tools
