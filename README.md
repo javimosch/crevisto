@@ -8,6 +8,18 @@ AI image generation from your terminal. 100 curated tools, agent-first, CLI-firs
 curl -fsSL https://crevisto.com/install.sh | sh
 ```
 
+Or with Go:
+
+```sh
+go install github.com/javimosch/crevisto@latest
+```
+
+Or with Homebrew:
+
+```sh
+brew tap javimosch/tap && brew install crevisto
+```
+
 Or download from [releases](https://github.com/javimosch/crevisto/releases):
 
 | Platform | File |
